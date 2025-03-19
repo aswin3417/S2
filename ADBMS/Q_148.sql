@@ -50,7 +50,10 @@ mysql> SELECT DISTINCT D1.CNAME
 +-------+
 1 row in set (0.00 sec)
 
-mysql> SELECT CNAME FROM CUSTOMERS WHERE CITY = 'Calicut';
+mysql> SELECT D.CNAME
+FROM DEPOSIT D
+JOIN CUSTOMERS C ON D.CNAME = C.CNAME
+WHERE C.CITY = 'calicut';
 +-------+
 | CNAME |
 +-------+
