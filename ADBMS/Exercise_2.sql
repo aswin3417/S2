@@ -219,12 +219,12 @@ EMPLOYEE AND JOB
 SMITH   		 CLERK
 ALLEN		SALESMAN
 
-   mysql> SELECT CONCAT(ename, '     ', job) AS "EMPLOYEE AND JOB" FROM Employee WHERE ename IN ('SMITH', 'ALLEN');
+   mysql> SELECT CONCAT(ename, '     ', job) AS "EMPLOYEE AND JOB" FROM Employee WHERE ename IN ('SMITH', 'ALLEN') order by ename desc;
 +--------------------+
 | EMPLOYEE AND JOB   |
 +--------------------+
-| Allen     Salesman |
 | Smith     Clerk    |
+| Allen     Salesman |
 +--------------------+
 2 rows in set (0.00 sec)
 
@@ -234,12 +234,12 @@ EMPLOYEE AND JOB
 SMITH(Clerk)
 ALLEN(Salesman)
 
-  mysql> SELECT CONCAT(ename, '(', job, ')') AS "EMPLOYEE AND JOB" FROM Employee WHERE ename IN ('SMITH', 'ALLEN');
+  mysql> SELECT CONCAT(ename, '(', job, ')') AS "EMPLOYEE AND JOB" FROM Employee WHERE ename IN ('SMITH', 'ALLEN') order by ename desc;
 +------------------+
 | EMPLOYEE AND JOB |
 +------------------+
-| Allen(Salesman)  |
-| Smith(Clerk)     |
+|  Smith(Clerk)    |
+|  Allen(Salesman) |
 +------------------+
 2 rows in set (0.00 sec)
 
