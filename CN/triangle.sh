@@ -14,3 +14,4 @@ echo "isosceles"
 else
 echo "scaline"
 fi
+#1
